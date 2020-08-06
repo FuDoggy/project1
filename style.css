@@ -91,7 +91,7 @@ a {
     color: gainsboro;
     font-weight: 500;
     letter-spacing: 1px;
-    font-style: italic;
+    font-style: italic; 
 }
 
 .bg-light {
