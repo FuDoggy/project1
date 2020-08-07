@@ -1,0 +1,25 @@
+body {
+    background-image: url(images/bg.jpg);
+    background-size: cover;
+}
+
+#header {
+    font-family: ;
+    text-align: center;
+    color: seashell;
+}
+
+#odd-row {
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: right;
+    background-color: lawngreen;
+}
+
+
+#even-row {
+    padding-right: 100px;
+    padding-left: 100px;
+    text-align: left;
+    background-color: palevioletred;
+}
