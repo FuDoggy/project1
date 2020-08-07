@@ -42,7 +42,10 @@ function initialize() {
                         for (var i = 0; i < results.length; i++) {
                             beaches.push(results[i].name);
                         }
+                        
                         console.log(beaches)
+                        localStorage.setItem("results", JSON.stringify(beaches));
+                        window.location.href = "search.html"
                     } else {
                         alert("Nearby Search is not working: " + status)
                     }
@@ -53,3 +56,5 @@ function initialize() {
         })
     })
 }
+
+console.log("hello");
