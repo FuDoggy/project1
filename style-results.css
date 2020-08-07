@@ -1,0 +1,69 @@
+
+body {
+    overflow: hidden;
+}
+.col-4 , .col-8 {
+    padding:0!important;
+}
+
+.col-8 {
+    color: white;
+    text-align: center;
+}
+.col-4 {
+    height:70vh;
+    background-image: url("./images/pexels-maria-isabella-bernotti-1049298.jpg");
+    background-size: cover;
+}
+
+.col-7 {
+    height: 50vh;
+    background-image: url("./images/beach-maui.jpg");
+    background-size: cover;
+}
+
+.col-5 {
+    height: 50vh;
+    background-image: url("./images/COWABUNGA_Surf-App-Results-Page_03.jpg");
+    background-size: cover;
+}
+
+.col-12 {
+    height: 30vh;
+    background-image: url("./images/COWABUNGA_Surf-App-Results-Page_04.jpg");
+    background-size: cover;
+    padding-left: 30px;
+}
+
+h2 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h3 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    float: left;
+    padding-top: 30px;
+}
+
+.row {
+    margin:0!important;
+}
+
+.hoverGrow {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    z-index:10
+}
+
+.hoverGrow:hover {
+    box-shadow: 5px 8px 4px darkcyan;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    z-index:200
+}
+
