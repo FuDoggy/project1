@@ -1,6 +1,6 @@
 body {
     background-image: url(images/bg.jpg);
-    background-size: cover;
+    background-size: auto;
 }
 
 #header {
@@ -9,17 +9,32 @@ body {
     color: seashell;
 }
 
+.pic-div img {
+    width: 350px;
+
+}
+
 #odd-row {
+    background: rgb(255,255,255,0.2);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    width: 90%;
+    margin: 0 auto;
     padding-left: 100px;
     padding-right: 100px;
     text-align: right;
-    background-color: lawngreen;
 }
 
 
 #even-row {
+    background: rgb(255,255,255,0.5);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    width: 90%;
+    margin: 0 auto;
     padding-right: 100px;
     padding-left: 100px;
     text-align: left;
-    background-color: palevioletred;
 }
