@@ -61,7 +61,7 @@
                           <div class="right-top">
                         <div class="ziprow font-style"><p>enter your zip code</p></div>
                         <form class="row3" class="form-inline my-2 my-lg-0">
-                            <input id="searchbar" class="form-control mr-sm-2" type="search" placeholder="Zip Code" aria-label="Search">
+                            <input id="searchbar" class="form-control mr-sm-2" type="search" placeholder="Zip Code" aria-label="Search" value="los angeles">
                             <button id="searchbutton" class="btn" type="submit"></button>
                         </form>
                         </div>
@@ -98,7 +98,9 @@
     <span class="text-muted"> © Copyright</span>
     </div>
 </footer> -->
-
+<div id="map" style="display: none; height: 400px; width: 100%;"></div>
+<script src="app.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initialize&key=AIzaSyCVgy0PNDkcyuJqKIbFbXEOdho0ydEQ9yo&libraries=places,geometry"></script>
 </body>
 
 
