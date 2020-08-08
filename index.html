@@ -1,95 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
-    <script src="https://use.fontawesome.com/84f732b584.js"></script>
-    
-    <title>Beach Finder</title>
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/gvn0oft.css">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
+
+  <title>Beach Finder</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+    integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://use.typekit.net/gvn0oft.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
 </head>
 
 <body>
+  <div class="container">
+    <header>
+      <div class="row">
+        <div class="col-6">
+          <div class="jumbotron text-white">
+            <h1 class="display-4" id="title">COWABUNGA</h1>
+            <h3 id="title">SURFING APP</h3>
+            <p class="lead my-3">
+              Cowabunga dudes and dudest, your gunna be glad you choose this
+              spot over other dudes. We got all the info you’ll ever need
+              man... of course we got surf report BRUH! What you think this
+              is!? Well tell you all the conditions you need to know, tide,
+              temp, waves, whatever man we know it. We got whether
+              report(don’t want to surf in a storm dude) ... Duuude duh!? How
+              else you gunna know if they have bars, restrooms and volleyball
+              courts or whatever man, trust me bruh your not going to be
+              disappointed so go ahead ask us a beach we’ll find out whatever
+              you need maaan! Type in your zip and we’ll find you the 5 best
+              beaches to SURF! and CHILL bruh hang lose an COWABUNGA!!!
+            </p>
+          </div>
+        </div>
 
-<div class="container">
+        <div class="col-6">
+          <div class="jumbotron" id="box">
+            <div class="row1">
+              Surfs's Up!
+              <p class="row2">Find your beach</p>
+            </div>
+            <br />
+            <div>
+              <h3 id="title">ENYER YOUR ZIP CODE</h3>
+              <form class="row3" class="form-inline my-2 my-lg-0">
+                <input id="searchbar" class="form-control mr-sm-2" type="search" placeholder="Zip Code"
+                  aria-label="Search" value="los angeles" />
+                <button id="searchbutton" class="btn" type="submit" formaction="search.html"></button>
+              </form>
+            </div>
+            <br />
 
-        <header>
-        
             <div class="row">
-                <div class="col-6">
-                    <div class="jumbotron text-white">
-                        <h1 class="display-4" id="title">COWABUNGA</h1>
-                        <h3 id="title">SURFING APP</h3>
-                        <p class="lead my-3">Cowabunga dudes and dudest, your gunna be glad you choose this spot over other dudes. 
-                          We got all the info you’ll ever need man... 
-                          of course we got surf report BRUH! 
-                          What you think this is!? Well tell you all the conditions you need to know, tide, temp, waves, whatever man we know it. 
-                          We got whether report(don’t want to surf in a storm dude) ... 
-                          Duuude duh!? How else you gunna know if they have bars, restrooms and volleyball courts or whatever man, trust me bruh your not going to be disappointed so go ahead ask us a beach we’ll find out whatever you need maaan! 
-                          Type in your zip and we’ll find you the 5 best beaches to SURF! and CHILL bruh hang lose an COWABUNGA!!!</p>           
-                    </div>
-               </div>
-          
-                
-                <div class="col-6">
-                    <div class="jumbotron" id="box">
-                      <div class="row1">Surfs's Up! 
-                        <p class="row2">Find your beach</p>
-                      </div>
-                      <br>
-                      <div>
-                        <h3 id="title">ENYER YOUR ZIP CODE</h3>
-                        <form class="row3" class="form-inline my-2 my-lg-0">
-                            <input id="searchbar" class="form-control mr-sm-2" type="search" placeholder="Zip Code" aria-label="Search" value="los angeles">
-                            <button id="searchbutton" class="btn" type="submit" formaction="search.html"></button>
-                        </form>
-                      </div>
-                      <br>
-                      
-                      
-                        <div class="row">
-                          <div class="col-4" class="card">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSu9I3JtmemoKDqJb0vFOzGAnq5WIw8U5oLYg&usqp=CAU" class="card-img-top" alt="Mission Beach">
-                            <p class="font-style">Mission Beach, SD</p>
-                          </div>
-                          
-                          <div class="col-4" class="card">
-                            <img src="https://ca-times.brightspotcdn.com/dims4/default/b3d90d6/2147483647/strip/true/crop/2736x1824+0+0/resize/840x560!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fe6%2F4e%2Fc20b06f34036a1368ae301ec73b8%2Fimg-3913.JPG" class="card-img-top" alt="Huntington Beach">
-                            <p class="font-style">Huntington Beach, OC</p>
-                          </div>
-                          
-                          <div class="col-4" class="card">
-                            <img src="https://media.timeout.com/images/103936205/image.jpg" class="card-img-top" alt="Malibu">
-                            <p class="font-style">Malibu, LA</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-    </header>
+              <div class="col-4" class="card">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSu9I3JtmemoKDqJb0vFOzGAnq5WIw8U5oLYg&usqp=CAU"
+                  class="card-img-top" alt="Mission Beach" />
+                <p class="font-style">Mission Beach, SD</p>
+              </div>
 
+              <div class="col-4" class="card">
+                <img
+                  src="https://ca-times.brightspotcdn.com/dims4/default/b3d90d6/2147483647/strip/true/crop/2736x1824+0+0/resize/840x560!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fe6%2F4e%2Fc20b06f34036a1368ae301ec73b8%2Fimg-3913.JPG"
+                  class="card-img-top" alt="Huntington Beach" />
+                <p class="font-style">Huntington Beach, OC</p>
+              </div>
+
+              <div class="col-4" class="card">
+                <img src="https://media.timeout.com/images/103936205/image.jpg" class="card-img-top" alt="Malibu" />
+                <p class="font-style">Malibu, LA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
   </div>
 
-<footer class="footer mt-auto py-3">
+  <footer class="footer mt-auto py-3">
     <div class="container">
-    <span class="text-muted"> © Copyright by Aragon, Andrew, Kevin F., Tristan, Juhee</span>
+      <span class="text-muted">
+        © Copyright by Aragon, Andrew, Kevin F., Tristan, Juhee</span>
     </div>
   </footer>
 
-<div id="map" style="display: none; height: 400px; width: 100%;"></div>
-<script src="app.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?callback=initialize&key=AIzaSyCVgy0PNDkcyuJqKIbFbXEOdho0ydEQ9yo&libraries=places,geometry"></script>
-
+  <div id="map" style="display: none; height: 400px; width: 100%;"></div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js"
+    integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J"
+    crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/84f732b584.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?callback=initialize&key=AIzaSyCVgy0PNDkcyuJqKIbFbXEOdho0ydEQ9yo&libraries=places,geometry"></script>
 </body>
-
 
 </html>
