@@ -22,16 +22,24 @@ $(document.body).ready(function () {
                 }
             })
 
+
+
             // Create div elements for the search results then append it
-            coastalinfo.forEach(function(item) {
+            coastalinfo.forEach(function(item,index) {
                 if (item.Photo_1 == "") {
-                    var element = $('<div class="row" id="odd-row"><div class="col-md-6"><div id="name1" class="info-div">' + item.NameMobileWeb + '</div></div><div class="col-md-6"><div class="pic-div"><img src="images/beach-sand.jpg" alt="..." class="img-thumbnail"></div></div></div><br>');
+                    var element = $('<div class="row result" id="odd-row" data-index="' + index + '"><div class="col-md-6"><div class="info-div">' + item.NameMobileWeb + '</div></div><div class="col-md-6"><div class="pic-div"><img src="images/beach-sand.jpg" alt="..." class="img-thumbnail"></div></div></div><br>');
                     $(".searches").append(element);
                 } else {
-                    var element = $('<div class="row" id="odd-row"><div class="col-md-6"><div id="name1" class="info-div">' + item.NameMobileWeb + '</div></div><div class="col-md-6"><div class="pic-div"><img src="' + item.Photo_1 + '" alt="..." class="img-thumbnail"></div></div></div><br>');
+                    var element = $('<div class="row result" id="odd-row" data-index="' + index + '"><div class="col-md-6"><div class="info-div">' + item.NameMobileWeb + '</div></div><div class="col-md-6"><div class="pic-div"><img src="' + item.Photo_1 + '" alt="..." class="img-thumbnail"></div></div></div><br>');
                     $(".searches").append(element);
                 }
             })
+
+            $(document).on("click", ".result", function() {
+                var dataindex = $(this).attr("data-index");
+                console.log(coastalinfo[dataindex]);
+            })
+            
 
         })
 
