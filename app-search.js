@@ -14,8 +14,10 @@ $(document.body).ready(function () {
             // Match the results.name from local storage to the coastal commisions API.name, then push into coastalinfo array
             beaches.forEach(function (item) {
                 var beachname = new RegExp(item.name);
+                // Latitude ranges within the approximate distance of a county
                 var beachlatmin = item.geometry.location.lat - 0.3284195;
                 var beachlatmax  = item.geometry.location.lat + 0.3284195;
+
                 for (var i = 0; i < response.length; i++) {
                     var coastalname = response[i].NameMobileWeb;
                     var coastaladdress = response[i].LocationMobileWeb;
@@ -61,5 +63,8 @@ $(document.body).ready(function () {
                 window.location.href = "results-page.html";
             })
         })
+    } else {
+        alert("Please enter your location!");
+        window.location.href = "index.html";
     }
 })
