@@ -10,7 +10,7 @@ $(document.body).ready(function () {
             url: "https://api.coastal.ca.gov/access/v1/locations",
             method: "GET"
         }).then(function (response) {
-
+            $("#loadingGif").hide()
             // Match the results.name from local storage to the coastal commisions API.name, then push into coastalinfo array
             beaches.forEach(function (item) {
                 var beachname = new RegExp(item.name);
