@@ -13,11 +13,21 @@ $(document.body).ready(function () {
 
             // Match the results.name from local storage to the coastal commisions API.name, then push into coastalinfo array
             beaches.forEach(function (item) {
-                var beachname = item.name;
+                var beachname = new RegExp(item.name);
+                var beachlatmin = item.geometry.location.lat - 0.3284195;
+                var beachlatmax  = item.geometry.location.lat + 0.3284195;
                 for (var i = 0; i < response.length; i++) {
                     var coastalname = response[i].NameMobileWeb;
-                    if (beachname == coastalname) {
-                        coastalinfo.push(response[i]);
+                    var coastaladdress = response[i].LocationMobileWeb;
+                    var coastallat = response[i].LATITUDE;
+
+                    // Search the name from google places api in the coastal commissions api within the NameMobileWeb and LocationMobileWeb
+                    if (beachname.test(coastalname) || beachname.test(coastaladdress)) {
+
+                        // Filter the matches by creating a latitude range, matched location must be nearby
+                        if (coastallat > beachlatmin && coastallat < beachlatmax) {
+                            coastalinfo.push(response[i]);
+                        }
                     }
                 }
             })
@@ -29,12 +39,11 @@ $(document.body).ready(function () {
             } else {
                 // Create div elements for the search results then append it, apply a stock photo if database doesn't have one, create a data-index for later reference
                 coastalinfo.forEach(function (item, index) {
-                    console.log(item);
                     if (item.Photo_1 == "") {
-                        var element = $('<div class="row result" id="odd-row" data-index="' + index + '"><div class="col-md-6"><div class="info-div"><p>' + item.NameMobileWeb + '</p><p>' + item.COUNTY + ' County, California</p></div></div><div class="col-md-6"><div class="pic-div"><img src="images/beach-sand.jpg" alt="..." class="img-thumbnail"></div></div></div><br>');
+                        var element = $('<div class="row result hoverGrow" id="odd-row" data-index="' + index + '"><div class="col-md-6"><div class="info-div"><p>' + item.NameMobileWeb + '</p><p>' + item.COUNTY + ' County, California</p></div></div><div class="col-md-6"><div class="pic-div"><img src="images/beach-sand.jpg" alt="..." class="img-thumbnail"></div></div></div><br>');
                         $(".searches").append(element);
                     } else {
-                        var element = $('<div class="row result" id="odd-row" data-index="' + index + '"><div class="col-md-6"><div class="info-div"><p>' + item.NameMobileWeb + '</p><p>' + item.COUNTY + ' County, California</p></div></div><div class="col-md-6"><div class="pic-div"><img src="' + item.Photo_1 + '" alt="..." class="img-thumbnail"></div></div></div><br>');
+                        var element = $('<div class="row result hoverGrow" id="odd-row" data-index="' + index + '"><div class="col-md-6"><div class="info-div"><p>' + item.NameMobileWeb + '</p><p>' + item.COUNTY + ' County, California</p></div></div><div class="col-md-6"><div class="pic-div"><img src="' + item.Photo_1 + '" alt="..." class="img-thumbnail"></div></div></div><br>');
                         $(".searches").append(element);
                     }
                 })
