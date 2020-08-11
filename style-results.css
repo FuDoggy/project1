@@ -45,6 +45,9 @@ h5 {
   background-size: cover;
   font-family: 'Roboto Condensed', sans-serif;
   text-align: left;
+  filter: brightness(70%);
+  -webkit-filter: brightness(70%);
+  -moz-filter: brightness(70%);
 }
 
 .col-5 {
@@ -62,6 +65,9 @@ h5 {
   font-family: 'Roboto Condensed', sans-serif;
   color: white;
   padding-left: 100px;
+  filter: brightness(85%);
+  -webkit-filter: brightness(85%);
+  -moz-filter: brightness(85%);
 }
 
 .row {
@@ -104,14 +110,18 @@ h5 {
   .col-5 {
     max-width: 50% !important;
     flex: none !important;
+    height: 37vh
   }
 
   .col-7 {
     max-width: 50% !important;
     flex: none !important;
-  
+    height: 37vh;
   }
 
+  .title-cards {
+    font-size: 1.75rem;
+  }
 
 }
 
