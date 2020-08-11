@@ -1,6 +1,28 @@
 body {
   overflow: hidden;
 }
+
+h2 {
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  padding-top: 50px;
+}
+
+h3 {
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  padding-top: 30px;
+  padding-left: 30px;
+}
+
+h5 {
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  
+  padding-left: 30px;
+}
+
 .col-4,
 .col-8 {
   padding: 0 !important;
@@ -9,44 +31,43 @@ body {
 .col-8 {
   color: white;
   text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .col-4 {
   height: 70vh;
-  /* background-image: url("./images/pexels-maria-isabella-bernotti-1049298.jpg"); */
   background-size: cover;
 }
 
 .col-7 {
   height: 50vh;
   background-image: url("./images/beach-maui.jpg");
+  background-color:rgba(0, 0, 0, 0.5);
   background-size: cover;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: left;
+  filter: brightness(70%);
+  -webkit-filter: brightness(70%);
+  -moz-filter: brightness(70%);
 }
 
 .col-5 {
   height: 50vh;
   background-image: url("./images/COWABUNGA_Surf-App-Results-Page_03.jpg");
   background-size: cover;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: left;
 }
 
 .col-12 {
   height: 30vh;
   background-image: url("./images/COWABUNGA_Surf-App-Results-Page_04.jpg");
   background-size: cover;
-  padding-left: 30px;
-}
-
-h2 {
+  font-family: 'Roboto Condensed', sans-serif;
   color: white;
-  font-family: "Roboto", sans-serif;
-  text-align: center;
-  padding-top: 50px;
-}
-
-h3 {
-  color: white;
-  font-family: "Roboto", sans-serif;
-  float: left;
-  padding-top: 30px;
+  padding-left: 100px;
+  filter: brightness(85%);
+  -webkit-filter: brightness(85%);
+  -moz-filter: brightness(85%);
 }
 
 .row {
@@ -70,4 +91,54 @@ h3 {
 .backgroundPicture {
   height: 300px;
   width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+
+  .col-4 {
+    max-width: 100% !important;
+    height: 50%;
+    flex: none !important;
+  }
+
+  .col-8 {
+    max-width: 100% !important;
+    margin: 0;
+    
+  }
+
+  .col-5 {
+    max-width: 50% !important;
+    flex: none !important;
+    height: 37vh
+  }
+
+  .col-7 {
+    max-width: 50% !important;
+    flex: none !important;
+    height: 37vh;
+  }
+
+  .title-cards {
+    font-size: 1.75rem;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .col-4 {
+    max-width: 100% !important;
+    height: 50%;
+    flex: none !important;
+  }
+  
+  .col-8 {
+    max-width: 100% !important;
+    flex: none !important;
+  }
+
+
+
+
 }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Beach Finder</title>
+    <title>Cowabunga - Beach Information</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
         integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
     <link rel="stylesheet" href="style-results.css">
@@ -13,41 +13,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="row" style="height:70vh;">
         <div class="col-4 hoverGrow" id="picture" style= "background-image: url('./images/pexels-maria-isabella-bernotti-1049298.jpg')">
         </div>
+
         <div class="col-8">
             <div class="hoverGrow col" style="background-color:rgb(28,94,94);height:20vh;">
                 <h2 id="beach-name">BEACH TITLE</h2>
             </div>
+            
             <div class="row">
-                <div id="weather" class="col-7 hoverGrow">
-                    <h3>WEATHER</h2>
+                <div class="col-7 hoverGrow">
+                    <h3 id="weather-card">WEATHER</h3>
+                    
+                    <h5 id="weather"></h5>
+                    
                 </div>
+                
                 <div class="col-5 hoverGrow">
-                    <h3 >AMENITIES</h2>
-                    </br>
-                </br>
-            </br>
+                    <h3 >AMENITIES</h3>    
+                    
                     <h5 id="amenities"></h5>
                 </div>
             </div>
         </div>
     </div>
+    
     <div class="row" style="height:30vh;">
-        <div id="surf" class="col-12 hoverGrow">
-            <h3> SURF CONDITIONS</h2>
+        <div class="col-12 hoverGrow">
+            <h3> SURF CONDITIONS</h3>
+            <h5 id="surf"></h5>
         </div>
-
     </div>
 
-    <script>
-        
-
-    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

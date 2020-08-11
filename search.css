@@ -3,15 +3,29 @@ body {
     background-size: auto;
 }
 
+a, a:hover {
+    color: white;
+    font-family: 'Anton', sans-serif;
+}
+
+
+
 #header {
     text-align: center;
     color: seashell;
+    font-family: 'Anton', sans-serif;
 }
 
 .pic-div img {
     width: 350px;
 
 }
+
+.searches {
+    font-family: 'Roboto Condensed', sans-serif;
+    
+}
+
 
 #odd-row {
     background: rgb(255,255,255,0.2);

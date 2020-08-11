@@ -42,19 +42,19 @@ if (beachPic1 !== "") {
 // $("#pic1").attr("src", beachPic1);
 
 amenities.append(
-  "<br><br>" +
+    
     amenParking +
-    "<br><br>" +
+    "<br>" +
     amenRestrooms +
-    "<br><br>" +
+    "<br>" +
     amenVisitor +
-    "<br><br>" +
+    "<br>" +
     amenCampgrounds +
-    "<br><br>" +
+    "<br>" +
     amenFishing +
-    "<br><br>" +
+    "<br>" +
     amenBoating +
-    "<br><br>"
+    "<br>"
 );
 
 console.log(amenParking);
@@ -71,7 +71,7 @@ $(document.body).ready(function() {
       var params = "airTemperature,precipitation,humidity,gust,waveDirection,waveHeight,wavePeriod"
       fetch(`https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=${params}`, {
       headers: {
-          "Authorization": "3ac08b94-db36-11ea-bdeb-0242ac130002-3ac08c5c-db36-11ea-bdeb-0242ac130002"
+          "Authorization": "47e42310-dbf1-11ea-a4f0-0242ac130002-47e423c4-dbf1-11ea-a4f0-0242ac130002"
       }
       }).then((response) => response.json()).then((data) => {
           var airTemperature;
