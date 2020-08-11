@@ -42,19 +42,19 @@ if (beachPic1 !== "") {
 // $("#pic1").attr("src", beachPic1);
 
 amenities.append(
-  "<br><br>" +
+    
     amenParking +
-    "<br><br>" +
+    "<br>" +
     amenRestrooms +
-    "<br><br>" +
+    "<br>" +
     amenVisitor +
-    "<br><br>" +
+    "<br>" +
     amenCampgrounds +
-    "<br><br>" +
+    "<br>" +
     amenFishing +
-    "<br><br>" +
+    "<br>" +
     amenBoating +
-    "<br><br>"
+    "<br>"
 );
 
 console.log(amenParking);
